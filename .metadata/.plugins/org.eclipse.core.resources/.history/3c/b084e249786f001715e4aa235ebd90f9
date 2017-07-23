@@ -63,8 +63,8 @@ public class ProbonoProjectController {
 	//프로보노 정보 검색
 	public static void getProbono(String probonoId) {
 		try {
-			RunningEndView.allView(ProbonoService.getProbono(probonoId));
-		} catch (Exception e) {
+			RunningEndView.allView(ProbonoService.getProbonoUser(probonoId));
+		} catch (SQLException e) {
 			e.printStackTrace();
 			RunningEndView.showError("프로보노 id로 해당 프로보노 검색 오류 ");
 		}
